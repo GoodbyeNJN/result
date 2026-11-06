@@ -1,0 +1,67 @@
+{
+    "name": "@goodbyenjn/result",
+    "version": "1.0.0",
+    "description": "A TypeScript Result type implementation",
+    "keywords": [
+        "result",
+        "typescript"
+    ],
+    "homepage": "https://github.com/GoodbyeNJN/result",
+    "bugs": {
+        "url": "https://github.com/GoodbyeNJN/result/issues"
+    },
+    "license": "MIT",
+    "author": "GoodbyeNJN <cc@fuckwall.cc>",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/GoodbyeNJN/result.git"
+    },
+    "files": [
+        "dist"
+    ],
+    "type": "module",
+    "sideEffects": false,
+    "exports": {
+        ".": {
+            "types": "./dist/full.d.ts",
+            "import": "./dist/full.js"
+        },
+        "./lite": {
+            "types": "./dist/lite.d.ts",
+            "import": "./dist/lite.js"
+        }
+    },
+    "publishConfig": {
+        "access": "public",
+        "registry": "https://registry.npmjs.org"
+    },
+    "scripts": {
+        "dev": "rolldown -w -c",
+        "build": "rolldown -c",
+        "check": "tsc && oxlint && oxfmt --check",
+        "check:type": "tsc",
+        "lint": "oxlint",
+        "lint:fix": "oxlint --fix",
+        "format": "oxfmt --check",
+        "format:write": "oxfmt",
+        "test": "vitest"
+    },
+    "devDependencies": {
+        "@goodbyenjn/configs": "^26.10.3",
+        "@types/node": "^26.6.6",
+        "oxfmt": "^0.76.0",
+        "oxlint": "^1.91.0",
+        "oxlint-tsgolint": "^7.0.2005",
+        "rolldown": "1.2.16",
+        "rolldown-plugin-dts": "^0.29.0",
+        "typescript": "^7.0.2",
+        "vitest": "^5.1.0"
+    },
+    "devEngines": {
+        "packageManager": {
+            "name": "pnpm",
+            "version": "^12.0.0",
+            "onFail": "download"
+        }
+    }
+}
