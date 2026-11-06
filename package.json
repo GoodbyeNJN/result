@@ -1,6 +1,6 @@
 {
     "name": "@goodbyenjn/result",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A TypeScript Result type implementation",
     "keywords": [
         "result",
